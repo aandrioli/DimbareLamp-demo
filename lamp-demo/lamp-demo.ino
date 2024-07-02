@@ -2,7 +2,7 @@
  * @file lamp-demo.ino
  * @author tony Andrioli
  * @brief Het hoofdbestand van het project
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  */
 
@@ -26,19 +26,12 @@
 #include <Adafruit_Microbit.h>
 #include "Lamp.h"
 
-// Licht l;
-// Schakelaar k('A', l);
-// Dimmer d('B', l.geefAantalStanden() -1, l);
-
 Lamp l;
 
 void setup() {
-  // Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
-  l.update()
-  // k.update();
-  // d.update();
-  // delay(10);
+  l.update();
 }

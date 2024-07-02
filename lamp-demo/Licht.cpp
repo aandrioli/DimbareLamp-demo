@@ -2,7 +2,7 @@
  * @file Licht.cpp
  * @author Tony Andrioli
  * @brief De implementatie van de Licht klasse
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  * 
  * Deze klasse gebruit de LED's van de MicroBit als imsulatie van de lamp. Er
@@ -11,36 +11,49 @@
  */
 #include "Licht.h"
 
-Licht::Licht() {
+Licht::Licht() : microbit() {
   aantalStanden = 4;
   stand = UIT;
   microbit.begin();
 };
 
-int Licht::geefAantalStanden(): microbit() {
+int Licht::geefAantalStanden() {
   return aantalStanden;
 };
 
 void Licht::uit() {
-  stand = UIT;
-  microbit.clear();
+  if (stand != UIT) { 
+    Serial.println("uit");
+    stand = UIT;
+    microbit.clear();
+  }
 };
 
 void Licht::aan( int newstand ) {
-  if (newstand == LAAG) 
-      stand = LAAG;
-  else if (newstand == MIDDEL) 
-      stand = MIDDEL;
-  else if (newstand == HOOG) 
-      stand = HOOG;
-  else if (newstand == UIT) 
-      stand = LAAG;
+  if ((stand != UIT) && (stand == newstand)) 
+    return;
+
+  if (newstand == LAAG) { 
+    stand = LAAG;
+  }
+  else if (newstand == MIDDEL) {
+    stand = MIDDEL;
+  }
+  else if (newstand == HOOG) {
+    stand = HOOG;
+  }
+  else if (newstand == UIT) {
+    stand = LAAG;
+  }
 
   microbit.show( plaatjes[stand -1] );
 };
 
-void Licht::aan(  ) {
-  aan(stand);
+void Licht::aan() {
+  if (stand != UIT)
+    aan(stand);
+  else
+    aan(LAAG);
 }
 
 int Licht::geefStand() {

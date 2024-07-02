@@ -2,7 +2,7 @@
  * @file Dimmer.h
  * @brief De dimmerknop, dwz een knop die na elke keer drukken de stand veranderd.
  * @author Tony Andrioli
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  * 
  * Dimmer is een subclass van @ref StandenKnop. Bij elke keer dat je op de knop

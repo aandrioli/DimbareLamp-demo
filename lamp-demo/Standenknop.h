@@ -2,7 +2,7 @@
  * @file Standenknop.h
  * @author Tony Andrioli
  * @brief Een knop die in een willekeurig aantal standen gezet kan worden, en gekoppeld is aan een @ref Licht
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  */
 
@@ -40,6 +40,8 @@ class StandenKnop {
      * @return int De huidige stand van de knop. Als het maximaal aantal standen n is, ligt de returnwaarde in de range [0..(n-1)]
      */
     int getStand();
+
+    int getMax() { return maxstand;};
 
   private:
     int button;     /* De knop 'A' of 'B' die gebruikt wordt. */

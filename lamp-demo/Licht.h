@@ -2,7 +2,7 @@
  * @file Licht.h
  * @author Tony Andrioli
  * @brief De Licht klasse, gebruit de LED's van de MicroBit als 'lamp'.
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  *
  * Deze klasse gebruit de LED's van de MicroBit als simulatie van de lamp. Er

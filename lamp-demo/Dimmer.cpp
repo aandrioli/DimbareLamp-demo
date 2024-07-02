@@ -2,7 +2,7 @@
  * @file Dimmer.cpp
  * @author Tony Andrioli
  * @brief De implementatie van de Dimmer
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  * 
  * Onderdeel van het lamp-demo project.
@@ -25,5 +25,6 @@ int Dimmer::update() {
       delay(150);
       led.uit();  
   }  
+
   return destand; 
 };

@@ -2,7 +2,7 @@
  * @file Schakelaar.h
  * @author Tony Andrioli
  * @brief Een schakelaar: een knop met 2 standen aan en uit 
- * @version 0.1
+ * @version 0.8
  * @date 2024-07-01
  * 
  * Een schakelaar is gekoppeld aan een @ref Licht object via zijn parent. Hij
