@@ -10,8 +10,8 @@ Het voornaamste doel van dit project is echter niet de functionaliteit maar, om 
 Mappen:
 
 - lamp-demo:  De code zoals die in de Arduino IDE is getest. Uiteraard moet je dan wel de Arduino omgeving hebben klaar gemaakt om te connecten met de MicroBit.
-- ontwerp: Het ontwerprapportje bijdit projectje. De uml diagrammen zijn gemaakt met UMLet.
-- testen: Het testplan en het testrapportje.
+- Ontwerp: Het ontwerprapportje bijdit projectje. De uml diagrammen zijn gemaakt met UMLet.
+- Testen: Het testplan en het testrapportje.
 
 Verder vindt je nog in de root *lampje-main.py*. Dit is code in de taal python, die je in de on-line simulator van de MicroBit kunt proberen.
 
