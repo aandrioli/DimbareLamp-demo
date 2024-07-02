@@ -1,0 +1,3 @@
+# Geen doc en docx files, enkel de .md
+*.docx
+*.doc
