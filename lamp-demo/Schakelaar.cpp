@@ -22,13 +22,11 @@ int Schakelaar::update() {
   int destand = StandenKnop::update();
 
   if (oud != destand) {
-    Serial.println("schakelaar update");
     if (isAan()) {
       led.aan();
     } else {
       led.uit();
     }
-    Serial.println("schakelaar update end");
   }
   return destand; 
 };

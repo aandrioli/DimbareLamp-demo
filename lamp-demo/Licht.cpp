@@ -23,7 +23,6 @@ int Licht::geefAantalStanden() {
 
 void Licht::uit() {
   if (stand != UIT) { 
-    Serial.println("uit");
     stand = UIT;
     microbit.clear();
   }
