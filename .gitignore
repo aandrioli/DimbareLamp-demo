@@ -1,3 +1,6 @@
 # Geen doc en docx files, enkel de .md
 *.docx
 *.doc
+
+# Doxygen ducumentatie niet op GitHub, die kan gegenereerd worden
+DoxyGenDocs/
