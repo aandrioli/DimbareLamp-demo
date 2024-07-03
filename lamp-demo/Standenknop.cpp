@@ -24,8 +24,10 @@ StandenKnop::StandenKnop(char knopnr, int standen, Licht& teSchakelen): led(teSc
 int StandenKnop::update() {
   if (! digitalRead(button) ) {
     pressed = true;
+    // Deze delay is vanwege het debouncen
     delay(10);
   } else {
+    // Verander de button stand bij het LOS laten van de knop.
     if (pressed) {
       pressed = false;
       stand = stand + 1;

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.1">
+<diagram program="umlet" version="15.0.0">
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>570</x>
-      <y>340</y>
+      <y>270</y>
       <w>120</w>
       <h>110</h>
     </coordinates>
@@ -14,22 +14,23 @@
 
 --
 +Lamp(): void
-+loop(): void</panel_attributes>
++update(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>810</x>
-      <y>300</y>
+      <y>220</y>
       <w>460</w>
-      <h>140</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>StandenKnop
 --
 - stand: int
 - maxstand: int
-- button: Button
+- button: int
+- pressed: bool
 --
 + StandenKnop( knopnr: char, standen: int, teSchakelen:Licht): void
 + update(): int
@@ -40,7 +41,7 @@
     <id>Relation</id>
     <coordinates>
       <x>660</x>
-      <y>440</y>
+      <y>370</y>
       <w>530</w>
       <h>220</h>
     </coordinates>
@@ -53,7 +54,7 @@ r1=dimknop</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>880</x>
-      <y>430</y>
+      <y>360</y>
       <w>30</w>
       <h>70</h>
     </coordinates>
@@ -64,7 +65,7 @@ r1=dimknop</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>810</x>
-      <y>480</y>
+      <y>410</y>
       <w>340</w>
       <h>110</h>
     </coordinates>
@@ -81,7 +82,7 @@ r1=dimknop</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>680</x>
-      <y>420</y>
+      <y>350</y>
       <w>150</w>
       <h>130</h>
     </coordinates>
@@ -94,7 +95,7 @@ r1=aanuitKnop</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>710</x>
-      <y>750</y>
+      <y>680</y>
       <w>210</w>
       <h>230</h>
     </coordinates>
@@ -105,9 +106,9 @@ halign=left</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>580</x>
-      <y>840</y>
-      <w>80</w>
+      <x>590</x>
+      <y>770</y>
+      <w>60</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>bewoner</panel_attributes>
@@ -117,7 +118,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>760</x>
-      <y>800</y>
+      <y>730</y>
       <w>120</w>
       <h>60</h>
     </coordinates>
@@ -129,7 +130,7 @@ zetten</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>760</x>
-      <y>900</y>
+      <y>830</y>
       <w>120</w>
       <h>60</h>
     </coordinates>
@@ -141,7 +142,7 @@ aanpassen</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>820</y>
+      <y>750</y>
       <w>140</w>
       <h>70</h>
     </coordinates>
@@ -152,7 +153,7 @@ aanpassen</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>870</y>
+      <y>800</y>
       <w>140</w>
       <h>80</h>
     </coordinates>
@@ -163,7 +164,7 @@ aanpassen</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>670</x>
-      <y>1120</y>
+      <y>1050</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -174,7 +175,7 @@ aanpassen</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>710</x>
-      <y>1490</y>
+      <y>1420</y>
       <w>30</w>
       <h>60</h>
     </coordinates>
@@ -186,7 +187,7 @@ layer=1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>710</x>
-      <y>1190</y>
+      <y>1120</y>
       <w>20</w>
       <h>310</h>
     </coordinates>
@@ -197,7 +198,7 @@ layer=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>710</x>
-      <y>1140</y>
+      <y>1070</y>
       <w>30</w>
       <h>70</h>
     </coordinates>
@@ -209,7 +210,7 @@ layer=1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>570</x>
-      <y>1070</y>
+      <y>1000</y>
       <w>650</w>
       <h>470</h>
     </coordinates>
@@ -221,34 +222,19 @@ layer=-1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>560</x>
-      <y>1180</y>
+      <y>1110</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-loop()</panel_attributes>
+update()</panel_attributes>
     <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLFrame</id>
-    <coordinates>
-      <x>660</x>
-      <y>1210</y>
-      <w>520</w>
-      <h>280</h>
-    </coordinates>
-    <panel_attributes>loop
---
-bg=yellow
-layer=-1
-</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>560</x>
-      <y>1490</y>
+      <y>1420</y>
       <w>170</w>
       <h>30</h>
     </coordinates>
@@ -259,7 +245,7 @@ layer=-1
     <id>UMLClass</id>
     <coordinates>
       <x>600</x>
-      <y>70</y>
+      <y>0</y>
       <w>220</w>
       <h>180</h>
     </coordinates>
@@ -281,7 +267,7 @@ layer=-1
     <id>Relation</id>
     <coordinates>
       <x>650</x>
-      <y>240</y>
+      <y>170</y>
       <w>60</w>
       <h>120</h>
     </coordinates>
@@ -294,7 +280,7 @@ r1=lichtje</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>730</x>
-      <y>240</y>
+      <y>170</y>
       <w>100</w>
       <h>110</h>
     </coordinates>
@@ -307,7 +293,7 @@ r1=-led</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1170</x>
-      <y>540</y>
+      <y>470</y>
       <w>400</w>
       <h>110</h>
     </coordinates>
@@ -323,7 +309,7 @@ r1=-led</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1170</x>
-      <y>430</y>
+      <y>360</y>
       <w>30</w>
       <h>130</h>
     </coordinates>
@@ -334,19 +320,19 @@ r1=-led</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>1140</y>
+      <y>1070</y>
       <w>30</w>
-      <h>140</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>830</x>
-      <y>1120</y>
+      <y>1050</y>
       <w>170</w>
       <h>30</h>
     </coordinates>
@@ -357,9 +343,9 @@ layer=1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>910</x>
-      <y>1260</y>
+      <y>1140</y>
       <w>20</w>
-      <h>210</h>
+      <h>270</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -368,24 +354,24 @@ layer=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>1460</y>
+      <y>1400</y>
       <w>30</w>
-      <h>80</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>840</x>
-      <y>1320</y>
-      <w>80</w>
+      <y>1250</y>
+      <w>120</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>halign=left
-[x = True]
+[deStand = True]
 lw=0
 layer=1</panel_attributes>
     <additional_attributes/>
@@ -394,7 +380,7 @@ layer=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>720</x>
-      <y>1240</y>
+      <y>1120</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -406,18 +392,19 @@ update()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>720</x>
-      <y>1460</y>
+      <y>1390</y>
       <w>210</w>
-      <h>30</h>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;.
+destand</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>1060</x>
-      <y>1120</y>
+      <y>1050</y>
       <w>90</w>
       <h>30</h>
     </coordinates>
@@ -428,7 +415,7 @@ update()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1090</x>
-      <y>1140</y>
+      <y>1070</y>
       <w>30</w>
       <h>200</h>
     </coordinates>
@@ -440,7 +427,7 @@ layer=1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>1090</x>
-      <y>1320</y>
+      <y>1250</y>
       <w>20</w>
       <h>30</h>
     </coordinates>
@@ -451,9 +438,9 @@ layer=1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>840</x>
-      <y>1290</y>
+      <y>1230</y>
       <w>320</w>
-      <h>160</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>alt
 --
@@ -470,19 +457,19 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>1240</y>
-      <w>130</w>
-      <h>60</h>
+      <y>1130</y>
+      <w>150</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-x := isAan()</panel_attributes>
-    <additional_attributes>10.0;40.0;80.0;20.0;10.0;20.0</additional_attributes>
+oud := isAan()</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;30.0;50.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>1300</y>
+      <y>1230</y>
       <w>190</w>
       <h>40</h>
     </coordinates>
@@ -493,27 +480,13 @@ aan()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>1210</y>
-      <w>110</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>halign=left
-[True]
-lw=0
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>840</x>
-      <y>1400</y>
-      <w>80</w>
+      <y>1330</y>
+      <w>120</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>halign=left
-[x = False]
+[deStand = False]
 lw=0
 layer=1</panel_attributes>
     <additional_attributes/>
@@ -522,18 +495,19 @@ layer=1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>1090</x>
-      <y>1400</y>
+      <y>1330</y>
       <w>20</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>layer=1
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>1340</y>
+      <y>1270</y>
       <w>190</w>
       <h>30</h>
     </coordinates>
@@ -544,7 +518,7 @@ layer=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>1380</y>
+      <y>1310</y>
       <w>190</w>
       <h>40</h>
     </coordinates>
@@ -556,7 +530,7 @@ uit()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>920</x>
-      <y>1420</y>
+      <y>1350</y>
       <w>190</w>
       <h>30</h>
     </coordinates>
@@ -567,7 +541,7 @@ uit()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1090</x>
-      <y>1340</y>
+      <y>1270</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -579,7 +553,7 @@ layer=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1090</x>
-      <y>1420</y>
+      <y>1350</y>
       <w>30</w>
       <h>120</h>
     </coordinates>
@@ -590,34 +564,8 @@ layer=1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>940</x>
-      <y>220</y>
-      <w>150</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Button is een klasse 
-uit het Microbit 
-package
-bg=light_gray</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>910</x>
-      <y>280</y>
-      <w>60</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;..
-</panel_attributes>
-    <additional_attributes>10.0;80.0;40.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
       <x>1230</x>
-      <y>1070</y>
+      <y>1000</y>
       <w>300</w>
       <h>200</h>
     </coordinates>
@@ -634,21 +582,10 @@ bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLFrame</id>
-    <coordinates>
-      <x>570</x>
-      <y>1560</y>
-      <w>840</w>
-      <h>550</h>
-    </coordinates>
-    <panel_attributes>SD dimstand aanpassen</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>210</x>
-      <y>290</y>
+      <y>220</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -663,7 +600,7 @@ bg=light_gray</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>80</x>
-      <y>130</y>
+      <y>60</y>
       <w>140</w>
       <h>100</h>
     </coordinates>
@@ -680,7 +617,7 @@ aan(stand)
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>220</y>
+      <y>150</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -692,7 +629,7 @@ aan(stand)
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>300</y>
+      <y>230</y>
       <w>120</w>
       <h>90</h>
     </coordinates>
@@ -708,7 +645,7 @@ uit()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>110</x>
-      <y>290</y>
+      <y>220</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -720,7 +657,7 @@ uit()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>90</x>
-      <y>220</y>
+      <y>150</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -732,7 +669,7 @@ uit()</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>280</x>
-      <y>150</y>
+      <y>80</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -747,7 +684,7 @@ wissel()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>310</x>
-      <y>220</y>
+      <y>150</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -759,12 +696,535 @@ wissel()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>170</y>
+      <y>100</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
     <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>830</x>
+      <y>1200</y>
+      <w>340</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>opt
+--
+
+
+
+layer=-1
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>1200</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>halign=left
+[deStand != oud]
+lw=0
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>710</x>
+      <y>1620</y>
+      <w>20</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>1570</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>670</x>
+      <y>1550</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_:Lamp_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>1610</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+update()</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>2000</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1160</y>
+      <w>270</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+deStand := Standenknop::update()</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;30.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>1570</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>830</x>
+      <y>1550</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_dimKnop:Dimmer_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>910</x>
+      <y>1640</y>
+      <w>20</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>1620</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+update()</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1630</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+vorige := getStand()</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;30.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1670</y>
+      <w>270</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+destand := Standenknop::update()</panel_attributes>
+    <additional_attributes>10.0;30.0;50.0;30.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>870</x>
+      <y>1760</y>
+      <w>360</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>alt
+--
+
+
+
+-.
+
+
+layer=-1
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1130</x>
+      <y>1550</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_led:Licht_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1570</y>
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1720</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>layer=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1700</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+geefStand()</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1720</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+ledstand</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1730</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>570</x>
+      <y>1490</y>
+      <w>690</w>
+      <h>590</h>
+    </coordinates>
+    <panel_attributes>SD dimstand aanpassen
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>1760</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>halign=left
+[ledstand &gt; 0]
+lw=0
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1800</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>layer=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1780</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+aan( destand+1)</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1800</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>1840</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>halign=left
+[else]
+lw=0
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1890</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>layer=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1810</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1870</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+aan( destand+1)</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>880</x>
+      <y>1860</y>
+      <w>330</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>opt
+--
+
+
+
+layer=0
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1930</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>layer=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1910</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+uit()</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1890</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>1930</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1900</y>
+      <w>30</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>1940</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>1950</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.
+layer=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>1940</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+destand</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>1990</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1270</x>
+      <y>1830</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Als het licht uit staat, 
+doe hem even aan om de 
+stand te tonen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>1860</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -78,7 +78,7 @@ We kunnen dus op functioneel niveau vaststekken dat de lamp zal bestaan uit de l
 
 ## 3. Technisch ontwerp
 
-Er is gebruik gemaakt van de MicroBit als platform voor de proof-of-concept. Er is dus ook gebruik gemaakt van de MicroBit libraries.
+Er is gebruik gemaakt van de MicroBit als platform voor de proof-of-concept. De microbit is geprogrammeerd in de Arduino IDE. Er is dus geen *main()*  functie maar een wel een bestand lamp-demo.ino net een *setup()* en een *loop()*. Alle klassen zijn geschreven in c++ en hebben een eihen header file en cpp file.
 
 ### 3.1 Klassen diagram (design)
 
@@ -88,7 +88,7 @@ Er is gebruik gemaakt van de MicroBit als platform voor de proof-of-concept. Er 
 
 Meest in het oog springende verschil met het functionele klassen diagram is de toevoeging van de '*StandenKnop*' klasse. Aangezien zowel de *Schakelaar* als de *Dimmer* worden geimplementeerd met dezelfde knoppen van de Microbit, ligt het voor de hand hier dezelfde basiscode te gebruiken.
 
-Een *StandenKnop* is gekoppeld aan een van de 2 knoppen (A of B) van de MicroBit. Dit zijn knoppen van de Button klasse uit de MicroBit library. Verder heeft een *StandenKnop* een associatie met het *Licht* object wat hij bedient.
+Een *StandenKnop* is gekoppeld aan een van de 2 knoppen (A of B) van de MicroBit. Verder heeft een *StandenKnop* een associatie met het *Licht* object wat hij bedient.
 
 Een *StandenKnop* kan, zoals de naam doet vermoeden, in meer dan 2 standen staan. Voor de *Dimmer* zijn er netzoveel standen als dat er dimstanden zijn. Voor een normale Aan-Uit *Schakelaar* zijn er 2 standen.
 
@@ -104,7 +104,7 @@ De *Licht* klasse gebruikt het scherm van de MicroBit om de felheid van de lamp 
 
 De *Lamp* klasse creeert de knoppen objecten en het Licht object, en koppelt de knoppen aan het Licht.
 
-Verder bevat het de hoofd loop die niets anders doet dan de *update()* functie van de beide knoppen in een oneindige loop aan te roepen.
+Verder bevat het de *Lamp.update()* functie die niets anders doet dan op zijn beurt de *update()* functie van de beide knoppen aan te roepen. *Lamp.update()* zelf, wordt aangeroepen vanuit de main loop van de Arduino (*.ino) file. **Omdat die laatste geen klasse bevat, enkel losse functies,  zie je die niet in het klassen diaagram.**
 
 ### 3.2 Sequentie diagrammen
 
@@ -116,6 +116,11 @@ Je kunt je afvragen waar de interactie met de actor is. Deze is hier niet te zie
 *Button* klasse van Microbit, en bij het modelleren werk je enkel je **eigen** geschreven objecten uit, en niet (of veel minder) die van de packages die je gebruikt.  
 Dus de interactie met de actor is er wel, maar zit 'verstopt' in de *update()* functie van de *Schakelaar*. Deze functie gebruikt de Button klasse.
 
-En een sequentie bij de twede use-case.
+En een sequentie bij de tweede use-case.
 
 ![sequentie dimmen](dimmen_sequentie.png)
+
+Let bij deze sequentie vooral even op het volgende: zowel de Lamp heeft een stand als de Dimmer heeft een stand.
+De lamp heeft standen 0 t/ 3, waarbij 0 uit is. De Dimmer heeft standen 0 t/m 2, waarbij 0 de stand LAAG is.  
+
+Lamp stand 1 komt dus overeen met Dimmer stand 0!!

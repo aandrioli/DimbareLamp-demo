@@ -15,4 +15,4 @@ Mappen:
 
 Verder vindt je nog in de root *lampje-main.py*. Dit is code in de taal python, die je in de on-line simulator van de MicroBit kunt proberen.
 
-De documentatie is gemaakr in het MarkDown format. Met de tool **pandoc** kun je hier bv een Microsoft Word bestandvan maken. Om de Documentatie van de c++ code te genereren heb je de tool **doxygen** nodig. 
+De documentatie is gemaakr in het MarkDown format. Met de tool **pandoc** kun je hier bv een Microsoft Word bestand van maken. Om de Documentatie van de c++ code te genereren heb je de tool **doxygen** nodig. 

@@ -41,8 +41,6 @@ class StandenKnop {
      */
     int getStand();
 
-    int getMax() { return maxstand;};
-
   private:
     int button;     /* De knop 'A' of 'B' die gebruikt wordt. */
     int maxstand;   /* Het maximaal aantal standen waarin de knop kan staan*/
